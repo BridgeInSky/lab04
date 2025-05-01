@@ -1,12 +1,12 @@
 # lab04
-[![Build Status](https://app.travis-ci.com/BridgeInSky/lab04.svg?token=TETaThcBJdejLLYy99ah&branch=main)](https://app.travis-ci.com/BridgeInSky/lab04)
-Клонируем репозиторий:
+
 ```
-git clone https://github.com/BridgeInSky/lab04.git
-cd lab04
+# Создаем директории для GitHub Actions
+mkdir -p .github/workflows
 ```
 Создадим файл travis.yml
 ```
+touch .github/workflows/linux.yml
 vim .travis.yml
 ```
 Содержимое файла:
@@ -28,9 +28,13 @@ script:
   - cmake ..
   - cmake --build .
 ```
-Запушим изменения:
+Markdown-код для отображения статуса сборки:
+![GitHub Actions](https://github.com/<ваш-username>/lab04/workflows/Linux%20Build/badge.svg)
+<br>
+Коммитим и пушим изменения
 ```
-git add .travis.yml
-git commit -m "Add TravisCI configuration"
+git add .github/workflows/
+git add README.md
+git commit -m "Add GitHub Actions workflows for CI"
 git push origin main
 ```
