@@ -7,7 +7,7 @@ mkdir -p .github/workflows
 Создадим файл travis.yml
 ```
 touch .github/workflows/linux.yml
-vim .travis.yml
+vim linux.yml
 ```
 Содержимое файла:
 ```
